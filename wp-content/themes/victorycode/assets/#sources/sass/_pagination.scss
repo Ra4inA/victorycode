@@ -1,0 +1,147 @@
+// Import icon font, I've used Entypo (http://entypo.com/)
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+// Import Roboto font
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+
+
+.pagination-container {
+	margin-top: 1em;
+	padding-top: 2em;
+	border-top: 1px solid #d7dadb;
+	text-align: center;
+
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.wp-paginate li {
+	display: inline-block;
+	border-right: 1px solid #d7dadb;
+
+	transform: scale(1) rotate(19deg) translateX(0px) translateY(0px) skewX(-10deg) skewY(-20deg);
+
+	&:last-child {
+		border-right: none;
+	}
+}
+
+
+
+.wp-paginate {
+}
+
+.wp-paginate .page {
+	padding: 1.1em 1.6em;
+	display: inline-block;
+	text-decoration: none;
+	color: #8b969c;
+
+	transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(20deg) skewY(0deg);
+}
+
+.wp-paginate .next,
+.wp-paginate .prev {
+	//@extend .pagination-item;
+	list-style-type: none;
+	display: inline-block;
+	// font-size: 20px;
+}
+
+.wp-paginate .prev {
+	margin: 0 1em 0 0;
+}
+
+.wp-paginate .next {
+	margin: 0 0 0 1em;
+}
+
+.wp-paginate .next,
+.wp-paginate .prev {
+	text-decoration: none;
+	// color: #8b969c;
+	padding: 1.1em 1.6em;
+	display: flex;
+	align-items: center;
+}
+
+.wp-paginate .next:hover,
+.wp-paginate .prev:hover {
+	color: $accent-color;
+}
+
+
+.wp-paginate li:hover,
+.pagination__current-item {
+	background-color: $second-color;
+	border-right: 1px solid #fff;
+	.current {
+		color: #fff;
+	}
+}
+
+
+
+.pagination-link--wide.first:before,
+.pagination-link--wide.last:after {
+	font-family: 'icomoon' !important;
+	content: "\e905";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  // Better Font Rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pagination-link--wide.first::before {
+	
+	margin-right: 0.5em;
+	display: inline-block;
+	transform: rotate(180deg);
+}
+
+.pagination-link--wide.last::after {
+	content: "\e905";
+	margin-left: 0.5em;
+}
+
+
+
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 576px) {
+
+	.pagination-container {
+		font-size: 10px;
+		line-height: 20px;
+	}
+
+	.pagination-item.first-number {
+
+		border-left: none;
+	}
+
+	.pagination-item.last-number {
+		border-right: none;
+	}
+
+	.pagination-item--wide .first, .pagination-item--wide .last {
+		font-size: 0px;
+
+		&::before {
+			font-size: 10px;
+		}
+
+	}
+	.pagination-item--wide .first::before, .pagination-item--wide .last::after {
+		font-size: 10px;
+	}
+}
+@media screen and (max-width: 320px) {
+}
